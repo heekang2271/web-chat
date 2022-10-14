@@ -1,4 +1,4 @@
-import mysql from 'mysql2';
+import mysql from 'mysql2/promise';
 
 const config = {
   user: process.env.DB_USER,
@@ -8,4 +8,17 @@ const config = {
   database: process.env.DB_NAME,
 };
 
-export default mysql.createConnection(config);
+const db = {
+  query: async (sql: string) => {
+    const db = await mysql.createConnection(config);
+    const [data, _] = await db.query(sql);
+
+    return data as any[];
+  },
+  exec: async (sql: string) => {
+    const db = await mysql.createConnection(config);
+    await db.query(sql);
+  },
+};
+
+export default db;
