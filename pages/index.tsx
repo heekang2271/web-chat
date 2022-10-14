@@ -1,4 +1,5 @@
 import Layout from '@components/common/Layout';
+import useTest from '@libs/client/useTest';
 import { ReactElement } from 'react';
 
 interface Home {}
@@ -8,6 +9,8 @@ const Home = ({}: Home) => {
 };
 
 Home.getLayout = function getLayout(page: ReactElement) {
+  const test = useTest();
+  console.log(test);
   return <Layout>{page}</Layout>;
 };
 
