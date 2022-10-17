@@ -12,7 +12,7 @@ export default createGlobalStyle`
     line-height: 1.5;
     font-family: 'Spoqa Han Sans Neo', 'sans-serif';
     font-size: 15px;
-    background-color: ${(props) => props.theme.bgColor};
+    background-color: #ffffff;
     color: ${(props) => props.theme.textColor};
   }
 

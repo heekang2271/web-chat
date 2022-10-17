@@ -5,9 +5,9 @@ import { ReactElement, ReactNode } from 'react';
 import { RecoilRoot } from 'recoil';
 import { ThemeProvider } from 'styled-components';
 
-import { lightTheme } from '@styles/theme';
+import { darkTheme } from '@styles/theme';
 import GlobalStyle from '@styles/GlobalStyle';
-// import '../styles/fonts.css';
+import '../styles/font.css';
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement, pageProps: any) => ReactNode;
@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppPropsWithLayout) {
 
   return (
     <RecoilRoot>
-      <ThemeProvider theme={lightTheme}>
+      <ThemeProvider theme={darkTheme}>
         {getLayout(<Component {...pageProps} />, pageProps)}
         <GlobalStyle />
       </ThemeProvider>
