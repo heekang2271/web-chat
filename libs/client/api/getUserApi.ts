@@ -5,9 +5,15 @@ import { ApiResult } from '@libs/types';
 import clientWithHandler from '../clientWithHandler';
 import { removeCookies } from 'cookies-next';
 
-interface EnterResult extends ApiResult {}
+export interface GetUserResult extends ApiResult {
+  user: {
+    uid: number;
+    email: string;
+    name: string;
+  };
+}
 
-export default clientWithHandler<undefined, EnterResult>({
+export default clientWithHandler<undefined, GetUserResult>({
   handler: async (_: undefined, token: string) => {
     const { data } = await axios.post(API_URL.USER_GET_USER, undefined, {
       headers: {

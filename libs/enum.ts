@@ -8,4 +8,5 @@ export const API_URL = {
   USER_REGISTER: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/user/register`,
   USER_ENTER: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/user/enter`,
   USER_GET_USER: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/user/getUser`,
+  USER_SEARCH: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/user/search`,
 };

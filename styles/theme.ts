@@ -8,4 +8,7 @@ export const darkTheme: DefaultTheme = {
   inputBgColor: '#303030',
   inputBorderColor: '#606060',
   errorColor: '#ff6348',
+  sidebarBgColor: '#505050',
+  hoverColor: '#333333',
+  borderColor: '#707070',
 };
